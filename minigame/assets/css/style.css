@@ -1,0 +1,199 @@
+@charset "utf-8";
+
+/* 共通デザイン */
+
+body {
+  font-family: 'Noto Sans JP', "Helvetica Neue", "Helvetica", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Arial", "Yu Gothic", "Meiryo", sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #333;
+}
+
+/* ==================
+PC用のスタイル
+================== */
+@media screen and (min-width: 768px) {
+  
+  /* 横幅設定 */
+  body {
+    max-width: 1080px;
+    min-width: 960px;
+    margin: 0 auto 0 auto;
+  }
+
+  .hero {
+    height: 640px;
+    width: 100%;
+    position: relative;
+  }
+
+  .hero > img {
+    width: 100%;
+  }
+
+  .hero-title {
+    position: absolute;
+    font-size: 26px;
+    font-weight: bold;
+    color: #bbb;
+    padding: 10px;
+    margin-left: 300px;
+  }
+
+  .link {
+    position: absolute;
+    background-color: #fff0F5;
+    padding: 30px 56px;
+    left: 33em;
+    top: 20em;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #f08080;
+  }
+
+  .link:hover {
+    text-decoration: underline;
+    color: #cd5c5c;
+  }
+
+  .avatar {
+    position: relative;
+    height: 640px;
+    width: 100%;
+    background-color: #f5f5f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    justify-content: space-around;
+  }
+
+  .jump {
+    height: 640px;
+    width: 100%;
+  }
+
+  .comment > p {
+    justify-content: center;
+    margin: 20px 100px 0px 100px;
+    padding: 40px 200px;
+    border-radius: 20px;
+    background-color: #ffffff;
+
+  }
+
+  .select {
+    margin-bottom: 20px;
+  }
+
+  .select > button {
+    color: #f08080;
+    background-color: #ffc0cb;
+    padding: 10px 20px;
+    margin-left: 20px;
+    border: none;
+    border-radius: 20px;
+  }
+
+  .select > button:hover{
+    color: #cd5c5c;
+    padding: 12px 22px;
+  }
+
+}
+
+/* 以下レスポンシブデザイン */
+
+
+/* ==============
+  スマホ用のスタイル 
+=============== */
+@media screen and (max-width: 767px) {
+
+  body {
+    min-width: 375px;
+    margin: 0;
+  }
+
+  .hero {
+    display: block;
+    position: relative;
+    align-items: center; /* 垂直方向の中央揃え */
+    justify-content: center; /* 水平方向の中央揃え */
+    height: 100vh; /* ビューポートの高さいっぱいに広がるように設定 */
+  }
+
+  .hero > img {
+    width: 100%;
+    height: 35%;
+  }
+
+  .hero-title {
+    font-size: 10px; /* 調整 */
+    font-weight: bold;
+    color: #bbb;
+    padding: 5px;
+    text-align: center; /* 中央揃えに変更 */
+    justify-content: center; 
+    flex-direction: column;
+  }
+
+  .link {
+    position: absolute;
+    background-color: #fff0F5;
+    padding: 10px 10px; /* 調整 */
+    left: 50%; /* 中央揃えに変更 */
+    top: 60%; /* 中央揃えに変更 */
+    transform: translate(-50%, -50%); /* 中央揃えに変更 */
+    font-size: 18px; /* 調整 */
+    font-weight: bold;
+    text-decoration: none;
+    color: #f08080;
+  }
+
+  .link:hover {
+    text-decoration: underline;
+    color: #cd5c5c;
+  }
+
+  .avatar {
+    display: block;
+    position: relative;
+    align-items: center; /* 垂直方向の中央揃え */
+    justify-content: center; /* 水平方向の中央揃え */
+    height: 100vh;
+  }
+
+  .avatar, .jump {
+    height: 320px; /* 調整 */
+    width: 100%;
+  }
+
+  .comment > p {
+    justify-content: center;
+    margin: 10px; /* 調整 */
+    padding: 15px; /* 調整 */
+    border-radius: 20px;
+    background-color: #ffffff;
+  }
+
+  .select {
+    margin-bottom: 10px; /* 調整 */
+  }
+
+  .select > button {
+    color: #f08080;
+    background-color: #ffc0cb;
+    padding: 8px 16px; /* 調整 */
+    margin: 5px; /* 調整 */
+    border: none;
+    border-radius: 20px;
+  }
+
+  .select > button:hover {
+    color: #cd5c5c;
+    padding: 10px 18px; /* 調整 */
+  }
+
+}
