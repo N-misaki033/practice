@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="assets/css/sanitize.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <!-- ヘッダー -->
+   
+  <header class="header">
+    <a href="index.html" class="logo">
+      <img src="assets/images/logo.png" alt="トップページに戻る">
+    </a>
+    <input type="checkbox" name="hamburger" id="hamburger">
+    <label for="hamburger"></label>
+    <ul class="nav">
+      <li class="nav-item">
+        <a href="index.html#portfolio" class="c-header__list-link">PORTFOLIO</a>
+      </li>
+      <li class="nav-item">
+        <a href="index.html#roadmap" class="c-header__list-link">ROADMAP</a>
+      </li>
+      <li class="nav-item">
+        <a href="index.html#experience" class="c-header__list-link">EXPERIENCE</a>
+      </li>
+      <li class="nav-item">
+        <a href="index.html#about" class="c-header__list-link">ABOUT</a>
+      </li>
+      <li class="nav-item">
+        <a href="index.html#contact" class="c-header__list-link">CONTACT</a>
+      </li>
+    </ul>
+    <label for="hamburger">
+      <span class="c-hamburger-menu__button-mark"></span>
+      <span class="c-hamburger-menu__button-mark"></span>
+      <span class="c-hamburger-menu__button-mark"></span>
+    </label>
+  </header>
+
+
+  
+  <main>
+    <article>
+      <section id="main-visual">
+        <img id="main-img" src="assets/images/hero.jpg" alt="メインビジュアル">
+        <div id="title">
+          <h1>My Portfolio</h1>
+          <p>私の制作物とこれまでの経験をご紹介します</p>
+        </div>
+      </section>
+      <!-- ポートフォリオ -->
+      <section id="portfolio">
+          <h2>Portfolio</h2>
+        <div>
+          <div class="imageerea">
+            <div class="images-wrapper">
+                <div class="image-wrapper">
+                    <img class="image" src="assets/images/minigame.png" alt="みーちゃんのお部屋">
+                    <div class="text">
+                      <a href="">みーちゃんのお部屋</a>
+                    </div>
+                </div>
+                <div class="image-wrapper">
+                    <img class="image" src="assets/images/website.png" alt="ポートフォリオサイト">
+                    <div class="text">Portfolioサイト</div>
+                </div>
+                <div class="image-wrapper">
+                    <img class="image" src="assets/images/typinggame.png" alt="タイピングゲーム">
+                    <div class="text">
+                      <a href="">タイピングゲーム</a>
+                    </div>
+                </div>
+                <!-- ポートフォリオ追加 ココ -->
+            </div>
+            <div class="arrow" onclick="scrollImages(1)">
+              <!-- →の画像 -->
+            </div>
+            <div class="arrow" onclick="scrollImages(1)">
+              <!-- ←の画像 -->
+            </div>
+        </div>
+
+      </div>
+      </section>
+      
+      
+      <!-- 技術獲得の道しるべ -->
+      <section id="roadmap">
+        <h2>Road Map =学習の軌跡</h2>
+        <div>
+          <!-- 左のカラム -->
+          <div class="roadmap-left">
+            <!-- 学習の開始 -->
+            <div class="timeline" id="study-start">
+              <div class="step">
+                <span class="study-title">学習の開始</span>
+                <h4>2023年9月</h4>
+                <p>
+                  プログラミングの学習を本格的に始めました。
+                  最初はHTMLとCSSからスタートし、<br>基本的なWEB開発のスキルを身につけることに焦点を当てました。
+                </p>
+              </div>
+              <div class="image-container">
+                <img src="assets/images/html-5.svg" alt="HTMLのロゴ">
+                <img src="assets/images/css-3.svg" alt="CSSのロゴ">
+              </div>
+            </div>
+
+            <!-- JavaScriptの習得 -->
+            <div class="timeline" id="js-study">
+              <div class="step">
+                <span class="study-title">JavaScriptの習得</span>
+                <h4>2023年10月</h4>
+                <p>
+                  Web開発をより動的にするためにJavaScriptの学習に進みました。<br>
+                  DOM操作やイベントハンドリングに焦点を当て、クライアントサイドの開発に必要なスキルを勉強しました。
+                </p>
+              </div>
+              <div class="image-container">
+                <img src="assets/images/javascript.svg" alt="JavaScriptのロゴ">
+              </div>
+            </div>
+
+            <!-- PHPの学習 -->
+            <div class="timeline" id="php-study">
+              <div class="step">
+                <span class="study-title">PHPの学習</span>
+                <h4>2023年11月 - 現在</h4>
+                <p>
+                  基本技術者試験の勉強と平行して、PHPの学習を始めています。<br>
+                  サーバーサイドのプログラミングに挑戦し、動的なウェブアプリケーションの開発に取り組みます。
+                </p>
+              </div>
+              <div class="image-container">
+                <img src="assets/images/php.svg" alt="PHPのロゴ">
+              </div>
+            </div>
+          </div>
+
+          <!-- 右のカラム -->
+          <div class="roadmap-right">
+            <!-- ITパスポートの取得 -->
+            <div class="timeline" id="itpas">
+              <div class="step">
+                <span class="study-title">ITパスポート取得</span>
+                <h4>2023年10月</h4>
+                <p>
+                  プログラミング以外のIT全般の知識を深めるためにITパスポートを取得。<br>
+                  ネットワークやセキュリティに関する基本的な理解を得ました。
+                </p>
+              </div>
+            </div>
+
+            <!-- 基本技術者試験の勉強 -->
+            <div class="timeline" id="test-study">
+              <div class="step">
+                <span class="study-title">基本情報技術者試験の勉強</span>
+                <h4>2023年11月 - 現在</h4>
+                <p>
+                  現在は基本情報技術者試験の勉強を進めています。<br>
+                  コンピュータの基本的な知識やネットワークに関する理解を深めつつ、
+                  同時にプログラミングスキルの向上にも努めています。
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- これまでの経験、スキル -->
+      <section id="experience">
+        <h2>Experience =経験とスキル=</h2>
+
+        <div>
+          <div>
+            <div class="skill">            
+                <h3>学習意欲と自己啓発</h3>
+                <ul>
+                  <li>常に知識の更新が必要とされる看護師としての経験から、学習効率向上の考え方を習得</li>
+                </ul>
+            </div>
+            <div class="experience-image">
+              <img src="assets/images/study.jpg" alt="学習と自己啓発">
+            </div>
+          </div>    
+          
+          <div>
+            
+            <div class="skill">            
+              <h3>柔軟性とコミュニケーション力</h3>
+              <ul>
+                <li>多職種や患者家族とのコミュニケーションを通じて得た力</li>
+                <li>緊急時の冷静な対応力と臨機応変な対応力</li>
+                <li>早産児や急性期の新生児との看護実践から得た医療機器の専門知識</li>
+              </ul>
+            </div>
+            <div class="experience-image">
+              <img src="assets/images/communication.jpg" alt="コミュニケーション">
+            </div>
+          </div>
+
+          <div>
+            
+            <div class="skill">  
+              <h3>リーダーシップと教育の役割</h3>
+              <ul>
+                <li>チーム医療におけるチームリーダー経験とメンバーサポート</li>
+                <li>後輩看護師の教育担当としての役割</li>
+                <li>勉強会係としてYouTube配信による時間外労働の削減への取り組みと動画編集技術の獲得</li>
+              </ul>
+            </div>
+            <div class="experience-image">
+              <img src="assets/images/nurse.jpg" alt="PCを操作する看護師">
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+
+      <!-- 自己紹介 -->
+      <sectiion id="about">        
+        <h2>About =自己紹介=</h2>
+
+        <div>
+        <img src="assets/images/profile.jpg" alt="プロフィール写真">
+          <div class="profile">
+            <h3>N.Misaki</h3>
+            <p>
+              神奈川県横浜市出身の26歳。<br>
+              看護師としての経験から業務効率化について考え、システム開発に興味が沸き、
+              プログラミングの学習を始めました。<br>
+              コーディングの過程で楽しさを感じ、エンジニアへの転職を決断しました。<br>
+              現在は日々学びを重ね、フロントエンドエンジニアを目指してスキル向上に努めています。<br>
+              将来的には学びの継続と多岐にわたる経験を通じて様々なスキルを獲得し、
+              フルスタックエンジニアとして広く活躍したいと考えています。
+            </p>
+
+          </div>
+        </div>
+      <!-- お問い合わせ -->
+      <section id="contact">
+        <h2>contact =お問い合わせ=</h2>
+        <form action="" method="post" name="form" onsubmit="return Validate()">
+        <div class="contact">
+          <div class="nameerea">
+            <div>
+              <!-- 名前 -->
+              <div class="contact-heading">
+                <label class="contact-label">お名前<span class="contact-span">必須</span></label>
+              </div>
+              <div>
+              <input type="text" name="name" placeholder="入力してください" class="contact-textbox">
+              </div>
+            </div>
+            <!-- メール -->
+            <div>
+              <div class="contact-heading">
+                <label class="contact-label">メールアドレス<span class="contact-span">必須</span></label>
+              </div>
+              <div>
+                <input type="text" name="email" placeholder="入力してください" class="contact-textbox">
+              </div>
+            </div>
+          </div>
+          <!-- お問い合わせ内容 -->
+          <div>
+            <div class="contact-heading">
+              <label class="contact-label">お問い合わせ内容<span class="contact-span">必須</span></label>
+            </div>
+            <div>
+              <textarea class="contact-textarea" placeholder="入力してください" name="message"></textarea>
+            </div>
+          </div>
+          <button id="button" type="submit">確認画面へ</button>
+        </form>
+        </div>
+      </section>
+
+    </article>
+  </main>
+
+  <footer>
+    <div class="footer">
+      <ul class="footermenu">
+        <li><a href="index.html#portfolio">PORTFOLIO</a></li>
+        <li><a href="index.html#about">ABOUT</a></li>
+        <li><a href="index.html#roadmap">ROADMAP</a></li>
+        <li><a href="index.html#experience">EXPERIENCE</a></li>
+        <li><a href="index.html#contact">CONTACT</a></li>
+      </ul>
+      <p class="copyright">
+        &copy;2023 N.Misaki, Inc. All Right Reserved.
+      </p>
+    </div>
+  </footer>
+</body>
+</html>

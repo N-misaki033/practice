@@ -1,0 +1,812 @@
+@charset "utf-8";
+
+/* 
+base style
+*/
+
+body {
+  font-family: 'Noto Sans JP', "Helvetica Neue", "Helvetica", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Arial", "Yu Gothic", "Meiryo", sans-serif;
+  font-size: 15px;
+  color: #333;
+}
+
+/* ==================
+PC用のスタイル
+================== */
+@media screen and (min-width: 768px) {
+  
+  /* 横幅設定 */
+   body {
+     max-width: 1080px;
+     min-width: 960px;
+     margin: 0 auto 0 auto;
+   }
+
+   header {
+    display: flex;
+    justify-content: space-between;
+    background-color: #d6a0a0;
+    padding: 10px 20px 5px 20px;
+  }
+    main{
+      background-color: #fff;
+    }
+    /* ロゴマークの装飾 */
+    #logo{
+      height: 100px;
+    }
+    /* ナビゲーション */
+    .header{
+      text-align: right;
+      font-size: 14px;
+      padding-top: 15px;
+    }
+    #hamburger{
+      display: none;
+    }
+    .nav{
+      display: flex;
+      font-size: 15px;
+      list-style: none;
+    }
+    .nav>li>a {
+      text-decoration: none;
+      margin-left: 10px;
+    }
+    .nav>li>a:link {
+      color: #0d0d0d;
+    }
+    .nav>li>a:visited {
+      color: #0d0d0d;
+    }
+    .nav>li>a:hover {
+      color: #0d0d0d;
+      text-decoration: underline;
+    }
+    .nav>li>a:active {
+      color: #0d0d0d;
+    }
+
+    /* メインビジュアル */
+    #main-visual {
+      position: relative;
+    }
+    #main-img{
+      width: 100%;
+      margin: 0;
+    }
+    #title{
+      position: absolute;
+      top: 100px;
+      left: 50px;
+      font-size: 22px;
+    }
+    /* 見出し（共通設定） */
+    h2 {
+      margin-top: 40px;
+    }
+    /* h2:before{
+      content: url(./../assets/images/line.png);
+      vertical-align: middle;
+    } */
+  
+
+    /* ポートフォリオ */
+    #portfolio{
+      width: 100%;
+      text-align: center;
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+
+    /* 画像を横並びにしてスライド */
+    .imageerea{
+      display: flex;
+      overflow-x: hidden; /* 可能な限り横スクロールを隠す*/
+      width: 100%;
+    }
+  
+    .images-wrapper {
+      display: flex; /* 追加: 画像を横に並べる */
+      width: 300%; /* 画像を3分割するので300%に設定 */
+      transition: transform 0.5s ease; /* アニメーション追加 */
+    }
+
+    .image-wrapper {
+      flex: 0 0 33.33%; /* 画面の1/3ずつに調整 */
+      box-sizing: border-box;
+      position: relative; /* 追加: 相対位置指定 */
+    }
+  
+    .image {
+      width: 95%;
+      height: auto; /* 修正: 高さは自動調整 */
+      object-fit: cover; /* 修正: 画像が枠にフィットするように */
+      border: 1px solid #ddd; /* 画像にボーダーを追加 */
+      border-radius: 8px; /* 画像に角丸を適用 */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 画像に影を追加 */
+    }
+  
+    .text {
+      margin-top: 10px; /* テキストの上部に余白を追加 */
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: rgba(255, 255, 255, 0.7); /* テキストの背景色（必要に応じて調整） */
+      padding: 8px;
+      text-align: center;
+    }
+  
+    .arrow {
+      cursor: pointer;
+      font-size: 24px;
+      margin-top: 10px; /* 矢印の上部に余白を追加 */
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    
+
+    /* 学習の道しるべ */
+    #roadmap{
+      width: 100%;
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+    /* 外枠 */
+    #roadmap>div{
+      margin-top: 40px;
+      display: flex;
+      padding: 0px 40px;
+      align-items: center;
+    }
+    /* 左のカラム */
+    .roadmap-left{
+      width: 50%;
+      padding-right: 20px;
+    }
+    /* 右のカラム */
+    .roadmap-right{
+      width: 50%;
+      padding-right: 20px;
+    }
+
+    .timeline{
+      width: 380px;
+      height: 380px;
+      background-color: #fff0f5;
+      box-shadow: 5px 5px 10px rgba(0,0,0,0.05);
+      margin: 40px 0;
+      padding: 20px 10px 0px 10px;
+      border-radius: 90px;
+      text-align: center;
+    }
+    .step>h4{
+      color: #f08080;
+      font-size: 26px;
+      margin: 0;
+    }
+    .step>p{
+      font-size: 18px;
+    }
+    .study-title{
+      font-size: 34px;
+      font-weight: bold;
+      margin: 0;
+    }
+    .image-container {
+      display: flex;
+      text-align: center;
+      width: 100%;
+      height: 100px;
+    }
+    
+    .image-container>img {
+      width: 100%;
+      height: auto;
+    }
+    
+
+    /* これまでの経験、スキル */
+    #experience{
+      position: relative;
+      width: 100%;
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+    #experience>div{
+      width: 100%;
+      margin-top: 40px;
+      display: flex;
+      padding: 0px 20px;
+      justify-content: center;
+    }
+    #experience>div>div{
+      margin: 0px 40px;
+    }
+  .skill{
+    width: 300px;
+    height: 300px;
+    padding: 10px;
+    display: block;
+    align-items: center;
+    background-color: #f3d9df;
+    border-radius: 150px;
+  }
+  .skill>ul>li{
+    margin-top: 8px;
+    font-size: 15px;
+    font-weight: bold
+  }
+  .skill>h3{
+    color: #333;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  .experience-image{
+    display: flex;
+    margin-top: -40px;
+    padding-left: 120px;
+  }
+  .experience-image>img{
+    height: 180px;
+    width: 180px;
+    border-radius: 150px;
+  }
+    
+    #about{
+      width: 100%;
+      margin: 80px 40px;
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+    #about>div{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    #about>div>img{
+      height: 200px;
+      width: 200px;
+      border-radius: 120px;
+      margin: 20px;
+    }
+    .profile>h3{
+      font-size: 20px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    #contact{
+      width: 100%;
+      margin: 40px 0px;
+    }
+    .contact{
+      align-items: center;
+      align-items: center;
+      display: block;
+      justify-content: center;
+      text-align: center;
+    }
+    
+    .contact-label {
+      font-weight: bold;
+    }
+    .contact-span {
+      color: #ce2222;
+      margin: 0 0 0 20px;
+      font-weight: bold;
+    }
+
+    .contact-textbox {
+      border-top: 0;
+      border-left: 0;
+      border-right: 0;
+      border-bottom-width: 1px;
+      border-bottom-color: #707070;
+      border-bottom-style: solid;
+      background-color: #fafafa;
+      width: 400px;
+      height: 56px;
+    }
+    .contact-textarea {
+      border-top: 0;
+      border-left: 0;
+      border-right: 0;
+      border-bottom-width: 1px;
+      border-bottom-color: #707070;
+      border-bottom-style: solid;
+      background-color: #fafafa;
+      width: 400px;
+      height: 200px;
+    }
+    #button{
+      font-size: 20px;
+      outline: none;
+      box-shadow: none;
+      border: none;
+      color: #bc8f8f;
+      background-color: #fff0f5;
+      border-radius: 20px;
+      padding: 5px;
+    }
+    #button:hover{
+      font-size: 22px;
+    }
+
+
+      footer{
+        width: 100%;
+        height: 150px;
+        background-color: #d6a0a0;
+        text-align: center;
+      }
+      .footer {
+        color: #f3d9df;
+        background: #d6a0a0;
+        text-align: center;
+        padding: 30px;
+      }
+      .footer a {
+        color: #f3d9df;
+        text-decoration: none;
+      }
+      .footer a:link {
+        color: #ffffff;
+      }
+      .footer a:hover {
+        color: #ffffff;
+        text-decoration: underline;
+      }
+      .footer a:active {
+        color: #ffffff;
+      }
+      .footer a:visited {
+        color: #ffffff;
+      }
+      .footer .footermenu {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .footermenu{
+        list-style: none;
+      }
+      .footermenu li {
+        margin: 0;
+        padding: 0 20px;
+      }
+      .copyright {
+        color: #f3d9df;
+        margin: 0;
+        padding: 20px 0 0 0;
+      }
+}
+
+/* ==================
+スマートフォン用のスタイル
+================== */
+@media screen and (max-width: 767px) {
+  body {
+    min-width: 375px;
+    margin: 0;
+  }
+
+  header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: #d6a0a0;
+    padding: 10px 10px 5px 10px;
+  }
+  main{
+    background-color: #fff;
+  }
+    /* ロゴマークの装飾 */
+    #logo{
+      width: 100%;
+      height: auto;
+    }
+
+  /* メインビジュアル */
+  #main-visual {
+    position: relative;
+    padding: 10px 0;
+    width: 100%;
+  }
+  #main-img{
+    width: 100%;
+    height: auto;
+    margin: 0;
+  }
+  #title {
+    position: absolute;
+    top: 20px;
+    font-size: 15px;
+    padding: 20px;
+  }
+  
+  /* ハンバーガーメニュー */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #bc8f8f; /* ヘッダーの背景色 */
+    padding: 10px 20px; /* パディング調整 */
+  }
+  
+  .logo {
+    text-decoration: none;
+    color: #fff; /* ロゴのテキスト色 */
+  }
+  
+  .logo img {
+    height: 50px; /* ロゴ画像の高さ */
+  }
+  
+  .nav {
+    list-style: none;
+    display: flex;
+  }
+  
+  .nav-item {
+    margin-right: 20px;
+  }
+  
+  .c-header__list-link {
+    text-decoration: none;
+    color: #fff; /* メニューのテキスト色 */
+    font-weight: bold;
+    font-size: 16px; /* メニューのフォントサイズ */
+  }
+  
+  /* ハンバーガーメニューのスタイル */
+  #hamburger {
+    display: none;
+  }
+  
+  label[for="hamburger"] {
+    cursor: pointer;
+    display: none;
+  }
+  
+  .c-hamburger-menu__button-mark {
+    display: block;
+    width: 25px; /* メニューバーの横幅 */
+    height: 3px; /* メニューバーの高さ */
+    background-color: #fff; /* メニューバーの色 */
+    margin: 5px 0; /* メニューバーの間隔 */
+  }
+  
+  /* レスポンシブデザインの調整 */
+  @media screen and (max-width: 767px) {
+    .nav {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      position: absolute;
+      top: 60px; /* ヘッダーの高さに合わせて調整 */
+      left: 0;
+      background-color: #bc8f8f; /* メニューの背景色 */
+      z-index: 1;
+    }
+  
+    .nav-item {
+      margin: 0;
+      text-align: center;
+    }
+  
+    #hamburger:checked + label + .nav {
+      display: flex;
+    }
+  
+    label[for="hamburger"] {
+      display: block;
+    }
+  }
+  
+  /* 見出し（共通設定） */
+  h2 {
+    margin-top: 20px;
+  }
+  /* h2:before{
+    content: url(./../assets/images/line.png);
+    vertical-align: middle;
+  } */
+
+
+  /* ポートフォリオ */
+  #portfolio{
+    width: 100%;
+    text-align: center;
+  }
+
+  /* 画像を横並びにしてスライド */
+  .imageerea{
+    display: flex;
+    overflow-x: hidden; /* 可能な限り横スクロールを隠す*/
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  .images-wrapper {
+    display: flex; /* 追加: 画像を横に並べる */
+    width: 300%; /* 画像を3分割するので300%に設定 */
+    transition: transform 0.5s ease; /* アニメーション追加 */
+    flex: 0 0 100%;
+  }
+
+  .image-wrapper {
+    flex: 0 0 33.33%; /* 画面の1/3ずつに調整 */
+    box-sizing: border-box;
+    position: relative; /* 追加: 相対位置指定 */
+  }
+
+  .image {
+    width: 95%;
+    height: auto; /* 修正: 高さは自動調整 */
+    object-fit: cover; /* 修正: 画像が枠にフィットするように */
+    border: 1px solid #ddd; /* 画像にボーダーを追加 */
+    border-radius: 8px; /* 画像に角丸を適用 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 画像に影を追加 */
+  }
+  .text {
+    /* ポートフォリオのテキストのスタイル調整 */
+    position: static;
+    width: 100%;
+    background-color: transparent;
+    text-align: center;
+  }
+
+  .arrow {
+    /* 矢印のスタイル調整 */
+    font-size: 20px;
+    margin-top: 5px;
+  }
+
+/* 学習の道しるべ */
+#roadmap>div{
+  width: 100%;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+#roadmap > div,
+#experience > div {
+  /* 学習の道しるべと経験、スキルのスタイル調整 */
+  flex-direction: column;
+  align-items: center;
+}
+.roadmap-left,
+.roadmap-right {
+  width: 100%;
+}
+.timeline{
+  width: 100%;
+  height: auto;
+  background-color: #fff0f5;
+  box-shadow: 5px 5px 10px rgba(0,0,0,0.05);
+  margin: 40px 0;
+  padding: 10px 5px 0px 5px;
+  border-radius: 80px;
+  text-align: center;
+}
+.step>h4{
+  color: #f08080;
+  margin: 0;
+}
+.step>p{
+  font-size: 18px;
+}
+.study-title{
+  font-size: 34px;
+  font-weight: bold;
+  margin: 0;
+}
+.image-container {
+  display: flex;
+  text-align: center;
+  width: 100%;
+  height: 100px;
+}
+
+.image-container>img {
+  width: 100%;
+  height: auto;
+}
+
+  .study-title,
+  .skill > h3 {
+    font-size: 24px;
+  }
+
+  /* これまでの経験、スキル */
+  #experience>div{
+    position: relative;
+    width: 100%;
+    margin-top: 40px;
+    justify-content: center;
+  }
+  #experience>div>div{
+    margin: 0px 40px;
+  }
+.skill{
+  width: 300px;
+  height: 300px;
+  padding: 10px;
+  display: block;
+  align-items: center;
+  background-color: #f3d9df;
+  border-radius: 150px;
+}
+.skill>ul>li{
+  margin-top: 8px;
+  font-size: 15px;
+  font-weight: bold
+}
+.skill>h3{
+  color: #333;
+  font-size: 20px;
+  font-weight: bold;
+}
+.experience-image{
+  display: block;
+  margin-top: -60px;
+  margin-bottom: 20px;
+  padding-left: 150px;
+}
+.experience-image>img{
+  height: 120px;
+  width: 120px;
+  border-radius: 60px;
+}
+
+
+  /* 自己紹介 */
+  #about > div {
+    width: 100%;
+    display: block;
+    text-align: center;
+  }
+
+  #about > div > img {
+    /* プロフィール写真のスタイル調整 */
+    height: 150px;
+    width: 150px;
+    border-radius: 75px;
+    margin: auto;
+  }
+
+  .profile > h3 {
+    font-size: 24px;
+  }
+  #about > div {
+    /* 自己紹介のスタイル調整 */
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  #about > div > img {
+    /* プロフィール写真のスタイル調整 */
+    height: 150px;
+    width: 150px;
+    border-radius: 75px;
+    margin: 10px;
+  }
+
+  .profile > h3 {
+    font-size: 24px;
+  }
+
+  /* お問い合わせ */  
+  #contact>form{
+    width: 100%;
+    margin: 40px 0;
+  }
+
+  .contact{
+    display: block;
+    text-align: center;
+  }
+  
+  .contact-label {
+    font-weight: bold;
+  }
+  .contact-span {
+    color: #ce2222;
+    margin: 0 0 0 20px;
+    font-weight: bold;
+  }
+
+  .contact-textbox {
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-bottom-width: 1px;
+    border-bottom-color: #707070;
+    border-bottom-style: solid;
+    background-color: #fafafa;
+    width: 90%;
+    height: 50px;
+  }
+  .contact-textarea {
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-bottom-width: 1px;
+    border-bottom-color: #707070;
+    border-bottom-style: solid;
+    background-color: #fafafa;
+    width: 90%;
+    height: 150px;
+  }
+  #button{
+    font-size: 18px;
+    outline: none;
+    box-shadow: none;
+    border: none;
+    color: #bc8f8f;
+    background-color: #fff0f5;
+    border-radius: 20px;
+    padding: 5px;
+  }
+  #button:hover{
+    font-size: 20px;
+  }
+
+  footer{
+    width: 100%;
+    height: auto;
+    background-color: #d6a0a0;
+    text-align: center;
+  }
+  .footer {
+    color: #f3d9df;
+    background: #d6a0a0;
+    text-align: center;
+    padding: 20px;
+  }
+  .footer>ul>li>a {
+    color: #f3d9df;
+    text-decoration: none;
+  }
+  .footer>ul>li>a:link {
+    color: #ffffff;
+  }
+  .footer>ul>li>a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+  }
+  .footer>ul>li>a:active {
+    color: #ffffff;
+  }
+  .footer>ul>li>a:visited {
+    color: #ffffff;
+  }
+  .footermenu {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: block;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .footermenu{
+    list-style: none;
+  }
+  .footermenu li {
+    margin: 5px 0;
+    padding: 0 ;
+  }
+  .copyright {
+    color: #f3d9df;
+    margin: 0;
+    padding: 10px 0 0 0;
+  }
+
+}
