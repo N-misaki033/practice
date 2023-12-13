@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="assets/css/sanitize.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+  <body>
+    <div id="openpage">
+      <div id="loader">
+        <span></span>
+        <span></span>
+        <span></span>
+        <h2>Now Loading...</h2>
+      </div>
+    </div>
+
+    <header>
+      <ul class="nav">
+        <li class="nav-item">
+          <a href="index.html#top" class="nav-link">TOP</a>
+        </li>
+        <li class="nav-item">
+          <a href="index.html#about" class="nav-link">ABOUT</a>
+        </li>
+        <li class="nav-item">
+          <a href="index.html#works" class="nav-link">WORKS</a>
+        </li>
+        <li class="nav-item">
+          <a href="index.html#contact" class="nav-link">CONTACT</a>
+        </li>
+      </ul>
+    </header>
+
+    <main>
+      <section id="top">
+          <div id="title"> 
+            <h1>My Portfolio</h1>
+            <div class="look">
+              <span><a href="index.html#works">Look Works</a></span> 
+            </div>
+        </div>        
+      </section>
+      
+      
+      <!-- 自己紹介 -->
+      <sectiion id="about">
+        <h2>ABOUT</h2>
+        <div>
+          <div id="photoarea">
+            <img class="photo1" src="assets/images/profile.jpg" alt="プロフィール写真">
+            <img class="photo2" src="assets/images/about_total.png" alt="プロフィール写真2">
+          </div>
+          
+          <div class="profile">
+            <h3>N.Misaki</h3>
+            <p>
+              東京都在住。<br>
+              看護師としての経験から業務効率化に興味を持ち、プログラミングの学習を始める。<br>
+              コーディングの過程で楽しさを感じ、エンジニアへの転職を決意。<br>
+              将来的には、社会貢献できるシステム開発に携わることを目標として日々邁進中。<br>
+            </p>
+          </div>
+        </div>
+      </sectiion>
+
+      <!-- 制作物 -->
+      <section id="works">
+        <h2>WORKS</h2>
+        <div class="image-contaner">
+          <div>
+            <div class="image-wrapper">
+              <img id="image-portfolio" class="image" src="assets/images/portfolio.png" alt="ポートフォリオサイト">
+              <div class="text">
+                <a href="index.html#top">Portfolioサイト</a>
+              </div>
+            </div>
+            <div class="image-wrapper">
+              <img id="image-game" class="image" src="assets/images/typinggame.png" alt="タイピングゲーム">
+              <div class="text">
+                <a href="typing game/index.html">タイピングゲーム</a>
+              </div>
+            </div>
+            <div class="image-wrapper">
+            <img class="image" src="assets/images/app.png" alt="作成中webアプリケーション">
+            <div class="text">
+              <p>現在作成中</p>
+            </div>
+        </div>
+        <!-- ポートフォリオ追加 ココ -->
+          </div>
+        </div>
+      </section>
+
+      <!-- お問い合わせ -->
+      <section id="contact">
+        <h2>CONTACT</h2>
+        <div>
+          <button id="button">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSckX6HlK_vf3a9wE9Usi05j-lgqQJOUldtmevXZcm1SzQLvXw/viewform?usp=pp_url">
+              お問い合わせはこちら
+            </a>
+          </button>
+        </div>
+
+        <!-- <form action="" method="post" name="form" onsubmit="return Validate()">
+          <div class="contact">
+            <div class="namearea">
+              <div>
+                
+                <div class="contact-heading">
+                  <label class="contact-label">お名前<span class="contact-span">必須</span></label>
+                </div>
+                <div>
+                <input type="text" name="name" placeholder="入力してください" class="contact-textbox">
+                </div>
+              </div>
+              
+              <div>
+                <div class="contact-heading">
+                  <label class="contact-label">メールアドレス<span class="contact-span">必須</span></label>
+                </div>
+                <div>
+                  <input type="text" name="email" placeholder="入力してください" class="contact-textbox">
+                </div>
+              </div>
+            </div>
+            
+            <div>
+              <div class="contact-heading">
+                <label class="contact-label">お問い合わせ内容<span class="contact-span">必須</span></label>
+              </div>
+              <div>
+                <textarea class="contact-textarea" placeholder="入力してください" name="message"></textarea>
+              </div>
+            </div>
+            <button id="button" type="submit">確認画面へ</button>
+          </div>
+        </form> -->
+      </section> 
+    </main>
+    <footer>
+      <div class="footer">
+        <ul class="footermenu">
+          <li><a href="index.html#top">TOP</a></li>
+          <li><a href="index.html#about">ABOUT</a></li>
+          <li><a href="index.html#works">WORKS</a></li>
+          <li><a href="index.html#contact">CONTACT</a></li>
+        </ul>
+        <p class="copyright"><small>
+          &copy;2023 N.Misaki, Inc. All Right Reserved.
+        </small></p>
+      </div>
+    </footer>
+    
+    <script src="main.js"></script>
+  </body>
+</html>
